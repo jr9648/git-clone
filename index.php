@@ -1,5 +1,5 @@
 <?php
-    require_once('teams.php');
+    /* require_once('teams.php');
     require_once('names.php');
     require_once('commands.php');
 
@@ -26,8 +26,8 @@
     $command = $_GET['command'];
 
     echo 'sudo -u ubuntu /home/ubuntu/barelab/build.sh '.
-            $_GET['team'].' '.$_GET['project'].' '.$_GET["repo"].' '.$command.' &<br />';
-    exec('sudo -u ubuntu /home/ubuntu/barelab/build.sh '.
+            $_GET['team'].' '.$_GET['project'].' '.$_GET["repo"].' '.$command.' &<br />'; */
+    exec('sudo -u angularadmin /home/devadmin/git/build.sh', $output, $return_code);//.
             $_GET['team'].' '.$_GET['project'].' '.$_GET["repo"].' '.$command.' &', $output, $return_code);
 
     echo "Random Run: ".rand(101010, 999999)." Return Code: ".$return_code."<br />";
