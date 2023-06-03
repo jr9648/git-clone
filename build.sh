@@ -7,11 +7,11 @@ TMP_DIR="/tmp"
 echo "Removing spool files from $TMP_DIR"
   
 # Counting the number of spool files
-files=`ls -l $TMP_DIR/<spool>* | wc -l` 
+files=`ls -l $TMP_DIR/*.txt | wc -l` 
 
 echo "There are total $files spool files in $TMP_DIR"
 
-rm -rf $TMP_DIR/<spool>*
+rm -rf $TMP_DIR/*.txt
 
 if [[ "$?" == "0" ]];then
     echo "All spool files successfully deleted"
@@ -20,7 +20,7 @@ else
 fi
 
 # Counting the number of spool files
-files=`ls -l $TMP_DIR/<spool>* | wc -l` 
+files=`ls -l $TMP_DIR/*.txt | wc -l` 
 
 echo "There are total $files spool files in $TMP_DIR directory"
 echo " "
