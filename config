@@ -1,0 +1,3 @@
+sudo visudo
+# Add the below mentioned line
+www-data ALL=(ALL) NOPASSWD: /home/ubuntu/instantpost/build.sh
